@@ -1,0 +1,12 @@
+diff -urbB kernel.unpatched/debian.hwe/config/config.common.ubuntu kernel/debian.hwe/config/config.common.ubuntu
+--- kernel.unpatched/debian.hwe/config/config.common.ubuntu	2019-09-30 22:23:05.000000000 +0000
++++ kernel/debian.hwe/config/config.common.ubuntu	2019-10-15 01:24:35.804607723 +0000
+@@ -1378,7 +1378,7 @@
+ # CONFIG_CGROUP_DEBUG is not set
+ CONFIG_CGROUP_DEVICE=y
+ CONFIG_CGROUP_FREEZER=y
+-CONFIG_CGROUP_HUGETLB=y
++CONFIG_CGROUP_HUGETLB=n
+ CONFIG_CGROUP_NET_CLASSID=y
+ CONFIG_CGROUP_NET_PRIO=y
+ CONFIG_CGROUP_PERF=y
