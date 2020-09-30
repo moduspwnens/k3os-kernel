@@ -1,0 +1,24 @@
+diff -urbB ./kernel.unpatched/debian.master/config/annotations kernel.cgroup-hugetlb/debian.master/config/annotations
+--- ./kernel.unpatched/debian.master/config/annotations	2020-09-10 10:12:09.000000000 +0000
++++ kernel.cgroup-hugetlb/debian.master/config/annotations	2020-09-30 15:04:04.568889918 +0000
+@@ -10382,7 +10382,7 @@
+ CONFIG_CGROUP_PIDS                              policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'i386': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+ CONFIG_CGROUP_RDMA                              policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'i386': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+ CONFIG_CGROUP_FREEZER                           policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'i386': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+-CONFIG_CGROUP_HUGETLB                           policy<{'amd64': 'y', 'arm64': 'y', 'armhf-generic-lpae': 'y', 'i386': 'y', 'ppc64el': 'y', 's390x': 'y'}>
++CONFIG_CGROUP_HUGETLB                           policy<{'amd64': 'n', 'arm64': 'n', 'armhf-generic-lpae': 'n', 'i386': 'n', 'ppc64el': 'n', 's390x': 'n'}>
+ CONFIG_CPUSETS                                  policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'i386': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+ CONFIG_PROC_PID_CPUSET                          policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'i386': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+ CONFIG_CGROUP_DEVICE                            policy<{'amd64': 'y', 'arm64': 'y', 'armhf': 'y', 'i386': 'y', 'ppc64el': 'y', 's390x': 'y'}>
+diff -urbB ./kernel.unpatched/debian.master/config/config.common.ubuntu kernel.cgroup-hugetlb/debian.master/config/config.common.ubuntu
+--- ./kernel.unpatched/debian.master/config/config.common.ubuntu	2020-09-10 10:12:09.000000000 +0000
++++ kernel.cgroup-hugetlb/debian.master/config/config.common.ubuntu	2020-09-30 15:03:10.507080895 +0000
+@@ -1438,7 +1438,7 @@
+ # CONFIG_CGROUP_DEBUG is not set
+ CONFIG_CGROUP_DEVICE=y
+ CONFIG_CGROUP_FREEZER=y
+-CONFIG_CGROUP_HUGETLB=y
++CONFIG_CGROUP_HUGETLB=n
+ CONFIG_CGROUP_NET_CLASSID=y
+ CONFIG_CGROUP_NET_PRIO=y
+ CONFIG_CGROUP_PERF=y
